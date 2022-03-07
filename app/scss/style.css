@@ -2,30 +2,41 @@ html {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  min-width: 348px;
+  overflow-x: hidden;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
 
 body {
+  width: 100%;
+  min-width: 348px;
+  overflow: hidden;
   margin: 0;
   padding: 0;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   font-size: 18px;
   line-height: 1.3;
 }
 
-a, a:visited, a:hover {
+a,
+a:visited,
+a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-size: 24px;
   margin: 0;
   font-weight: 900;
-  font-family: 'Fraunces', serif;
+  font-family: "Fraunces", serif;
 }
 
 p {
@@ -41,7 +52,7 @@ span {
 
 button {
   display: inline-block;
-  font-family: 'Fraunces', serif;
+  font-family: "Fraunces", serif;
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 900;
@@ -99,6 +110,8 @@ button {
 
 .container {
   max-width: 1440px;
+  min-width: 340px;
+  overflow-x: hidden;
   margin: 0 auto;
 }
 
@@ -300,12 +313,12 @@ button {
 
 .header {
   min-height: 540px;
-  background-image: url("/images/mobile/image-header.jpg");
+  background-image: url("../../images/mobile/image-header.jpg");
 }
 
 @media (min-width: 700px) {
   .header {
-    background-image: url("/images/desktop/image-header.jpg");
+    background-image: url("../../images/desktop/image-header.jpg");
   }
 }
 
@@ -317,6 +330,7 @@ button {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  width: auto;
 }
 
 .header__toggle > span {
@@ -442,7 +456,7 @@ button {
   letter-spacing: 9px;
   font-size: 32px;
   color: white;
-  font-family: 'Fraunces', serif;
+  font-family: "Fraunces", serif;
   font-weight: 900;
   text-transform: uppercase;
   margin-bottom: 60px;
@@ -524,7 +538,7 @@ button {
 }
 
 .top-features .item__image {
-  background-image: url("/images/mobile/image-transform.jpg");
+  background-image: url("../../images/mobile/image-transform.jpg");
 }
 
 @media (min-width: 700px) {
@@ -532,7 +546,7 @@ button {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    background-image: url("/images/desktop/image-transform.jpg");
+    background-image: url("../../images/desktop/image-transform.jpg");
   }
 }
 
@@ -555,12 +569,12 @@ button {
 }
 
 .middle-features .item__image {
-  background-image: url("/images/mobile/image-stand-out.jpg");
+  background-image: url("../../images/mobile/image-stand-out.jpg");
 }
 
 @media (min-width: 700px) {
   .middle-features .item__image {
-    background-image: url("/images/desktop/image-stand-out.jpg");
+    background-image: url("../../images/desktop/image-stand-out.jpg");
   }
 }
 
@@ -587,12 +601,12 @@ button {
 }
 
 .bottom-features-primary .item__image {
-  background-image: url("/images/mobile/image-graphic-design.jpg");
+  background-image: url("../../images/mobile/image-graphic-design.jpg");
 }
 
 @media (min-width: 700px) {
   .bottom-features-primary .item__image {
-    background-image: url("/images/desktop/image-graphic-design.jpg");
+    background-image: url("../../images/desktop/image-graphic-design.jpg");
   }
 }
 
@@ -614,12 +628,12 @@ button {
 }
 
 .bottom-features-secondary .item__image {
-  background-image: url("/images/mobile/image-photography.jpg");
+  background-image: url("../../images/mobile/image-photography.jpg");
 }
 
 @media (min-width: 700px) {
   .bottom-features-secondary .item__image {
-    background-image: url("/images/desktop/image-photography.jpg");
+    background-image: url("../../images/desktop/image-photography.jpg");
   }
 }
 
@@ -753,42 +767,42 @@ button {
 }
 
 #milkbottles {
-  background-image: url("/images/mobile/image-gallery-milkbottles.jpg");
+  background-image: url("../../images/mobile/image-gallery-milkbottles.jpg");
 }
 
 @media (min-width: 700px) {
   #milkbottles {
-    background-image: url("/images/desktop/image-gallery-milkbottles.jpg");
+    background-image: url("../../images/desktop/image-gallery-milkbottles.jpg");
   }
 }
 
 #orange {
-  background-image: url("/images/mobile/image-gallery-orange.jpg");
+  background-image: url("../../images/mobile/image-gallery-orange.jpg");
 }
 
 @media (min-width: 700px) {
   #orange {
-    background-image: url("/images/desktop/image-gallery-orange.jpg");
+    background-image: url("../../images/desktop/image-gallery-orange.jpg");
   }
 }
 
 #cone {
-  background-image: url("/images/mobile/image-gallery-cone.jpg");
+  background-image: url("../../images/mobile/image-gallery-cone.jpg");
 }
 
 @media (min-width: 700px) {
   #cone {
-    background-image: url("/images/desktop/image-gallery-cone.jpg");
+    background-image: url("../../images/desktop/image-gallery-cone.jpg");
   }
 }
 
 #sugar {
-  background-image: url("/images/mobile/image-gallery-sugar-cubes.jpg");
+  background-image: url("../../images/mobile/image-gallery-sugar-cubes.jpg");
 }
 
 @media (min-width: 700px) {
   #sugar {
-    background-image: url("/images/desktop/image-gallery-sugarcubes.jpg");
+    background-image: url("../../images/desktop/image-gallery-sugarcubes.jpg");
   }
 }
 

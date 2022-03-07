@@ -1,130 +1,130 @@
 .features {
-    text-align: center;
-    &__item {
-        min-height: 310px;
+  text-align: center;
+  &__item {
+    min-height: 310px;
 
-        @include breakpoint-up(medium) {
-            width: 50%;
-            min-height: 420px;
-        } 
-        @include breakpoint-up(large) {
-            min-height: 600px;
-        }
+    @include breakpoint-up(medium) {
+      width: 50%;
+      min-height: 420px;
     }
+    @include breakpoint-up(large) {
+      min-height: 600px;
+    }
+  }
 }
 .item {
-    &__text {
-        text-align: left;
+  &__text {
+    text-align: left;
+  }
+  &__title {
+    margin-bottom: 40px;
+    color: $veryDarkBlue;
+    @include breakpoint-up(large) {
+      font-size: 32px;
     }
-    &__title {
-        margin-bottom: 40px;
-        color: $veryDarkBlue;
-        @include breakpoint-up(large){
-            font-size: 32px;
-        }
+  }
+  &__description {
+    margin-bottom: 42px;
+  }
+  &__image {
+    @extend .background-properties;
+    min-height: 310px;
+    @include breakpoint-up(medium) {
+      min-height: 420px;
     }
-    &__description {
-        margin-bottom: 42px;
-    }
-    &__image {
-        @extend .background-properties;
-        min-height: 310px;
-        @include breakpoint-up(medium) {
-            min-height: 420px;
-        }
-    } 
+  }
 }
 .top-features {
-    flex-direction: column;
+  flex-direction: column;
 
-    @include breakpoint-up(medium) {
-        flex-direction: row;
-        flex-wrap: wrap;
+  @include breakpoint-up(medium) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .item {
+    &__image {
+      background-image: url("../../images/mobile/image-transform.jpg");
+      @include breakpoint-up(medium) {
+        order: 2;
+        background-image: url("../../images/desktop/image-transform.jpg");
+      }
     }
-    .item {
-        &__image {
-            background-image: url('/images/mobile/image-transform.jpg');
-            @include breakpoint-up(medium) {
-                order: 2;
-                background-image: url('/images/desktop/image-transform.jpg');
-            }
-        }
-    }
+  }
 }
 .middle-features {
-    flex-direction: column;
-    
-    @include breakpoint-up(medium) {
-        flex-direction: row;
-        flex-wrap: wrap;
+  flex-direction: column;
+
+  @include breakpoint-up(medium) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .item {
+    &__image {
+      background-image: url("../../images/mobile/image-stand-out.jpg");
+      @include breakpoint-up(medium) {
+        background-image: url("../../images/desktop/image-stand-out.jpg");
+      }
     }
-    .item {
-        &__image {
-            background-image: url('/images/mobile/image-stand-out.jpg');
-            @include breakpoint-up(medium) {
-                background-image: url('/images/desktop/image-stand-out.jpg');
-            }
-        }
+  }
+  .button-underline {
+    &::after {
+      background-color: $softRed;
     }
-    .button-underline {
-        &::after {
-            background-color: $softRed;
-        }
-    }
+  }
 }
 .bottom-features {
-    flex-direction: column;
-    @include breakpoint-up(medium) {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+  flex-direction: column;
+  @include breakpoint-up(medium) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .bottom-features-primary {
-    .item {
-        &__image {
-            background-image: url('/images/mobile/image-graphic-design.jpg');
-            @include breakpoint-up(medium) {
-                background-image: url('/images/desktop/image-graphic-design.jpg');
-            }
-        }    
-        &__title {
-            text-align: center;
-            color: $darkDesaturatedCyan;
-            // @include breakpoint-up(medium) {
-                
-            // }     
-        }
-        &__description {
-            text-align: center;
-            color: $darkDesaturatedCyan;
-            @include breakpoint-up(medium) {
-                text-align: center;
-                margin-bottom: 0px;
-            } 
-        }
+  .item {
+    &__image {
+      background-image: url("../../images/mobile/image-graphic-design.jpg");
+      @include breakpoint-up(medium) {
+        background-image: url("../../images/desktop/image-graphic-design.jpg");
+      }
     }
+    &__title {
+      text-align: center;
+      color: $darkDesaturatedCyan;
+      // @include breakpoint-up(medium) {
+
+      // }
+    }
+    &__description {
+      text-align: center;
+      color: $darkDesaturatedCyan;
+      @include breakpoint-up(medium) {
+        text-align: center;
+        margin-bottom: 0px;
+      }
+    }
+  }
 }
 .bottom-features-secondary {
-    .item {
-        &__image {
-            background-image: url('/images/mobile/image-photography.jpg');
-            @include breakpoint-up(medium) {
-                background-image: url('/images/desktop/image-photography.jpg');
-            }
-        }    
-        &__title {
-            color: $darkBlue;
-            @include breakpoint-up(medium) {
-                text-align: center;
-            } 
-        }
-        &__description {
-            color: $darkBlue;
-            @include breakpoint-up(medium) {
-                text-align: center;
-                margin-bottom: 0px;
-            } 
-        }
+  .item {
+    &__image {
+      background-image: url("../../images/mobile/image-photography.jpg");
+      @include breakpoint-up(medium) {
+        background-image: url("../../images/desktop/image-photography.jpg");
+      }
     }
+    &__title {
+      color: $darkBlue;
+      @include breakpoint-up(medium) {
+        text-align: center;
+      }
+    }
+    &__description {
+      color: $darkBlue;
+      @include breakpoint-up(medium) {
+        text-align: center;
+        margin-bottom: 0px;
+      }
+    }
+  }
 }
 

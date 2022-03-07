@@ -1,131 +1,124 @@
 .header {
-    min-height: 540px;
-    @extend .background-properties;
-    background-image: url("/images/mobile/image-header.jpg");
+  min-height: 540px;
+  @extend .background-properties;
+  background-image: url("../../images/mobile/image-header.jpg");
 
-    @include breakpoint-up(medium) {
-        background-image: url("/images/desktop/image-header.jpg");
+  @include breakpoint-up(medium) {
+    background-image: url("../../images/desktop/image-header.jpg");
+  }
+
+  nav {
+    position: relative;
+  }
+
+  &__logo {
+    flex: 1;
+    width: auto;
+  }
+
+  &__toggle {
+    > span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background-color: $white;
+      transition: all 0.3s ease-in;
+
+      &:not(:last-child) {
+        margin-bottom: 7px;
+      }
     }
 
-    nav {
-        position: relative;
+    &.active {
+      span:nth-child(1) {
+        transform: rotate(-45deg);
+        transform-origin: top right;
+      }
+      span:nth-child(2) {
+        transform: scaleX(0);
+      }
+      span:nth-child(3) {
+        transform: rotate(45deg);
+        transform-origin: bottom right;
+      }
+    }
+  }
+
+  &__links {
+    a {
+      display: inline-block;
+      font-family: inherit;
+      color: $white;
+      font-size: 17px;
+      margin-right: 50px;
+      transition: color 0.3s ease-in;
+      &:hover {
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 102px;
+    width: calc(100% - 48px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 48px;
+    padding-bottom: 40px;
+    display: flex;
+    background-color: $white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    a {
+      font-size: 18px;
+      padding: 20px;
+      color: $darkGrayishBlue;
+      transition: color 0.3s ease-in;
+      &:hover {
+        color: $veryDarkGrayishBlue;
+      }
+      &:last-of-type {
+        margin-bottom: 10px;
+      }
+    }
+    button {
+      background-color: $yellow;
+    }
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 133px;
+
+    @include breakpoint-up(large) {
+      padding-top: 130px;
+      padding-bottom: 330px;
     }
 
-    &__logo {
-        flex: 1;
+    h1 {
+      text-align: center;
+      line-height: 1.3;
+      letter-spacing: 9px;
+      font-size: 32px;
+      color: $white;
+      font-family: "Fraunces", serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 60px;
+
+      @include breakpoint-up(large) {
+        font-size: 48px;
+        margin-bottom: 100px;
+      }
     }
-
-    &__toggle {
-
-        > span {
-            display: block;
-            width: 25px;
-            height: 2px;
-            background-color: $white;
-            transition: all 0.3s ease-in;
-
-            &:not(:last-child) {
-                margin-bottom: 7px;
-            } 
-            
-        }
-
-        &.active {
-            
-            span:nth-child(1) {
-                transform: rotate(-45deg);
-                transform-origin: top right;
-                
-            }
-            span:nth-child(2) {
-                transform: scaleX(0);
-            }
-            span:nth-child(3) {
-                transform: rotate(45deg);
-                transform-origin: bottom right;
-            }
-        }
-
-        
-    }
-
-    &__links {
-        a { 
-            display: inline-block;    
-            font-family: inherit;
-            color: $white;
-            font-size: 17px;
-            margin-right: 50px;
-            transition: color 0.3s ease-in;
-            &:hover {
-                color: rgba(0,0,0,0.5);
-            }
-        }
-    }
-
-    .mobile-menu {
-        position: absolute;
-        top: 102px;
-        width: calc(100% - 48px);
-        left: 50%;
-        transform: translateX(-50%);
-        padding-top: 48px;
-        padding-bottom: 40px;
-        display: flex;
-        background-color: $white;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 2;
-        
-        a {
-            font-size: 18px;
-            padding: 20px;
-            color: $darkGrayishBlue;
-            transition: color 0.3s ease-in;
-            &:hover {
-                color: $veryDarkGrayishBlue;
-            }
-            &:last-of-type {
-                margin-bottom: 10px;
-            }
-        }
-        button {
-            background-color: $yellow;
-        }
-    }
-
-    .hero {
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        justify-content: center;
-        padding-top: 100px;
-        padding-bottom: 133px;
-
-        @include breakpoint-up(large) {
-            padding-top: 130px;
-            padding-bottom: 330px;
-        }
-        
-        h1 {
-            text-align: center;
-            line-height: 1.3;
-            letter-spacing: 9px;
-            font-size: 32px;
-            color: $white;
-            font-family:'Fraunces', serif;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 60px;
-
-            @include breakpoint-up(large) {
-                font-size: 48px;
-                margin-bottom: 100px;
-            }
-        }
-        
-    }
-   
+  }
 }
 
